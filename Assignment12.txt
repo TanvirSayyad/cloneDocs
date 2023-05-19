@@ -1,0 +1,50 @@
+import React from 'react';
+
+const TextEditor = () => {
+  return (
+    <div className="text-editor">
+      <textarea className="editor-content" placeholder="Start typing..." />
+    </div>
+  );
+};
+
+const Toolbar = () => {
+  return (
+    <div className="toolbar">
+      <div className="toolbar__left">
+        <span className="toolbar__document-name">Untitled Document</span>
+        <button className="toolbar__button">Formatting Option 1</button>
+        <button className="toolbar__button">Formatting Option 2</button>
+      </div>
+      <div className="toolbar__right">
+        <button className="toolbar__button">Share</button>
+      </div>
+    </div>
+  );
+};
+
+const Sidebar = () => {
+  return (
+    <div className="sidebar">
+      <ul>
+        <li className="sidebar__item">Google Drive</li>
+        <li className="sidebar__item">Google Sheets</li>
+        <li className="sidebar__item">Google Slides</li>
+      </ul>
+    </div>
+  );
+};
+
+const GoogleDocsClone = () => {
+  return (
+    <div className="google-docs-clone">
+      <Toolbar />
+      <div className="main-content">
+        <TextEditor />
+        <Sidebar />
+      </div>
+    </div>
+  );
+};
+
+export default GoogleDocsClone;
